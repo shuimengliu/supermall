@@ -40,16 +40,16 @@ export default {
   mounted() {},
 };
 </script>
-<style scoped>
+<style>
 .tab-bar-item {
   flex: 1;
   text-align: center;
   height: 49px;
   font-size: 14px;
 }
-.tab-bar-item img {
-  width: 24px;
-  height: 24px;
+.tab-bar-item img{
+  width: 30px;
+  height: 30px;
   margin-top: 3px;
   vertical-align: middle;
 }

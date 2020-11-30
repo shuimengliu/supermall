@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MainTabBad from 'components/content/TabBar/MainTabBad'
+import MainTabBad from 'components/content/maintabbar/MainTabBad'
   
   export default {
     name: 'app',
