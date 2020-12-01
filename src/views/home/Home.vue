@@ -5,17 +5,21 @@
         <div>购物车</div>
       </template>
     </nav-bar>
+    <home-swiper :banners="banners" />
   </div>
 </template>
 
 <script>
 import NavBar from "components/common/navbar/NavBar";
+import HomeSwiper from './childComps/HomeSwiper'
+
 import { getHomeMultidata } from "network/home";
 
 export default {
   name: "Home",
   components: {
     NavBar,
+    HomeSwiper
   },
   data() {
     return {
@@ -26,8 +30,8 @@ export default {
   created() {
     //1.请求多个数据
     getHomeMultidata().then((res) => {
-      this.banners = res.data.banner;
-      this.recommends = res.recommend;
+      this.banners = res.data.banner.list;
+      this.recommends = res.data.recommend.list;
     });
   },
 };
