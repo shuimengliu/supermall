@@ -17,5 +17,5 @@ import MainTabBad from 'components/content/maintabbar/MainTabBad'
 </script>
 
 <style lang="stylus">
-
+@import 'assets/css/base.css';
 </style>
