@@ -8,24 +8,76 @@
     <home-swiper :banners="banners" />
     <home-recommend-view :recommends="recommends" />
     <home-feature-view />
+    <tab-control class="tab-control" :titles="['流行', '新款', '精选']" ></tab-control>
+    <ul>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+    </ul>
   </div>
 </template> 
 
 <script>
-import NavBar from "components/common/navbar/NavBar";
 import HomeSwiper from "./childComps/HomeSwiper";
 import HomeRecommendView from "./childComps/HomeRecommendView";
 import HomeFeatureView from "./childComps/HomeFeatureView";
+
+import NavBar from "components/common/navbar/NavBar";
+import TabControl from "components/content/tabControl/TabControl";
 
 import { getHomeMultidata } from "network/home";
 
 export default {
   name: "Home",
   components: {
-    NavBar,
     HomeSwiper,
     HomeRecommendView,
     HomeFeatureView,
+    NavBar,
+    TabControl,
   },
   data() {
     return {
@@ -56,5 +108,9 @@ export default {
   right: 0;
   top: 0;
   z-index: 9;
+}
+.tab-control{
+  position: sticky;
+  top: 44px;
 }
 </style>
